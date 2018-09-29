@@ -1,8 +1,20 @@
 import Vue from 'vue'
 import App from './App.vue'
+import { createRouter } from './router'
+import { createStore } from './store'
+import { sync } from 'vuex-router-sync'
 
 Vue.config.productionTip = false
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+const router = createRouter()
+const store = createStore()
+
+sync(store, router)
+
+const app = new Vue({
+    router,
+    store,
+    render: h => h(App)
+})
+
+app.$mount('#app')
