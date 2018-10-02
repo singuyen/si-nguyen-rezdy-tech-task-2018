@@ -8,9 +8,8 @@ RUN npm run build
 
 # final image
 FROM node:alpine
-EXPOSE 8080
 WORKDIR /usr/src/app
-RUN npm install serve -g
-COPY --from=build /usr/src/app/dist ./dist
+COPY . /usr/src/app
 USER node
-CMD ["serve", "--single", "--port", "8080", "dist"]
+EXPOSE 8080
+CMD [ "npm", "start" ]

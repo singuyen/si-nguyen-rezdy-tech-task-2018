@@ -11,10 +11,10 @@ export function createRouter() {
         fallback: false,
         scrollBehavior: () => ({ y: 0 }),
         routes: [
-            { path: '/home', component: showPage('home')},
-            { path: '/contact-us', component: showPage('content-us')},
+            { path: '/lunch', component: showPage('lunch')},
+            { path: '/contact-us', component: showPage('contact-us')},
             { path: '/about-us', component: showPage('about-us')},
-            { path: '/', redirect: '/home'}
+            { path: '/', redirect: '/lunch'}
         ]
     })
 }
