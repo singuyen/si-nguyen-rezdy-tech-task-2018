@@ -38,3 +38,13 @@ npm run build
 ```
 npm run test
 ```
+
+### Build your docker
+```
+npm run docker
+```
+
+### Production build & Server-side running
+```
+npm start
+```

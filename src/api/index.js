@@ -1,3 +1,8 @@
+/* 
+API calls are putting in public folder instead of internal call 
+and doing a fetch to mimic REST API calls in reality.
+*/
+
 import axios from 'axios'
 
 function fetch (child) {
