@@ -13,7 +13,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="item-list" v-for="item in getFilteredRecipes">
+                <tr 
+                    v-for="item in getFilteredRecipes"
+                        :key="item.title"
+                        :item="item">
                     <td>{{ item.title }}</td>
                     <td>{{ item.isAvailableInFridge }}</td>
                     <td>{{ item.isBeforeUseBy }}</td>

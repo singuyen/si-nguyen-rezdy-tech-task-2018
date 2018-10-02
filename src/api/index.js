@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 function fetch (child) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         axios
             .get(child)
             .then(response => {

@@ -16,6 +16,6 @@ export default {
             }
         })
         
-        return orderBy(availableRecipes, ['isBeforeBestBefore'], ['desc'])
+        return orderBy(availableRecipes, ['isBeforeBestBefore'], ['desc']) || []
     }
 }
