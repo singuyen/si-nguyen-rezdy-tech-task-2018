@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav>
+        <router-link to="/lunch">Lunch </router-link>
+        <router-link to="/about-us">About </router-link>
+        <router-link to="/contact-us">Contact </router-link>
+    </nav>
+    <div class="container">
+        <router-view class="view"></router-view>
+    </div>
+    <TodayRecipes />
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodayRecipes from './components/TodayRecipes.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    TodayRecipes
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus" scoped>
+nav
+    display flex 
+    
+    a
+        display block 
+        padding 10px
+        text-decoration none 
+        background #DADADA
+        
+    a.router-link-active 
+        background #000
+        color #FFF
+
+.container
+    margin 10px 0
 </style>
+
