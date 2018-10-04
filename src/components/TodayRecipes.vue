@@ -13,7 +13,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr 
+                <tr class="item-list"
                     v-for="item in getFilteredRecipes"
                         :key="item.title"
                         :item="item">
